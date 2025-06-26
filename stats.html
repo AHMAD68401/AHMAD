@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>الإحصائيات</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="جامعة"></div>
+
+<div class="navbar">
+  <img src="aleppo.jpg" alt="شعار" class="aleppo" />
+  <a href="index.html">الصفحة الرئيسية</a>
+  <a href="stats.html" class="active">الإحصائيات</a>
+  <a href="team.html">اللاعبين</a>
+  <a href="teacher.html">مدرس المادة</a>
+  <a href="designers.html">الفريق المنفذ للمشروع</a>
+</div>
+
+<h2 class="results-title">نتائج اللاعبين</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>الاسم</th>
+      <th>النتيجة</th>
+      <th>إجابات صحيحة</th>
+      <th>إجابات خاطئة</th>
+      <th>التاريخ</th>
+    </tr>
+  </thead>
+  <tbody id="statsBody"></tbody>
+</table>
+
+<script>
+  const players = JSON.parse(localStorage.getItem("players")) || [];
+  const statsBody = document.getElementById("statsBody");
+
+  players.forEach(player => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${player.name}</td>
+      <td>${player.score}/${player.total}</td>
+      <td>${player.correct}</td>
+      <td>${player.wrong}</td>
+      <td>${player.date}</td>
+    `;
+    statsBody.appendChild(row);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>اللاعبين</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="navbar">
+    <img src="aleppo.jpg" alt="شعار" class="aleppo" />
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="stats.html">الإحصائيات</a>
+    <a href="team.html" class="active">اللاعبين</a>
+    <a href="teacher.html">مدرس المادة</a>
+    <a href="designers.html">الفريق المنفذ للمشروع</a>
+  </div>
+
+  <h2 class="results-title">قائمة اللاعبين</h2>
+
+  <ul id="playersList"></ul>
+
+  <script>
+    const players = JSON.parse(localStorage.getItem("players")) || [];
+    const playersList = document.getElementById("playersList");
+
+    if(players.length === 0) {
+      playersList.innerHTML = "<li>لا يوجد لاعبين مسجلين بعد.</li>";
+    } else {
+      players.forEach(player => {
+        const li = document.createElement("li");
+        li.textContent = player.name;
+        playersList.appendChild(li);
+      });
+    }
+  </script>
+
+</body>
+</html>

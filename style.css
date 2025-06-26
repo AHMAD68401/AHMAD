@@ -1,0 +1,251 @@
+/* ========== الإعدادات العامة ========== */
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('images/aa.png.avif') center/cover no-repeat fixed;
+  color: #fff;
+}
+
+/* ========== شريط التنقل ========== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: rgba(12, 26, 222, 0.6);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  direction: rtl;
+}
+
+.navbar .aleppo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ecf0f1;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+.navbar a {
+  color: rgb(194, 229, 113);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  background: #ef0909;
+  color: #fff;
+}
+.navbar a.active {
+  background: #8bdf0d;
+  color: #fff;
+}
+
+/* ========== الصفحة الرئيسية ========== */
+.main-title {
+  font-size: 2rem;
+  color: #fff;
+  margin: 30px 0 20px;
+}
+
+#playerName {
+  width: 80%;
+  max-width: 300px;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  outline: none;
+  text-align: right;
+  transition: 0.3s;
+}
+#playerName:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 8px #2980b9;
+}
+
+/* ========== الأزرار ========== */
+button {
+  margin-top: 10px;
+  padding: 11px 22px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: #8606db;
+  transition: 0.3s;
+}
+button:hover {
+  background: #2980b9;
+}
+
+/* ========== واجهة الأسئلة ========== */
+.question-box {
+  background: rgba(20, 124, 215, 0.8);
+  border: 2px solid #2196f3;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  color: #fff;
+}
+
+.question-text {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.options-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.option {
+  background: #0c068f;
+  border: 2px solid #c30d0d;
+  border-radius: 10px;
+  padding: 12px calc(3cm + 12px);
+  cursor: pointer;
+  font-size: 18px;
+  color: #f0f0f0;
+  width: fit-content;
+  max-width: 90%;
+  text-align: center;
+  transition: 0.3s;
+}
+.option:hover {
+  background: #e2090c;
+}
+
+.option-number {
+  font-weight: bold;
+  margin-left: 10px;
+  color: #a7cf0a;
+}
+
+/* ========== بطاقات النتائج ========== */
+.card {
+  background: rgba(255,255,255,0.1);
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(230, 3, 181, 0.9);
+  color: #fff;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 10px 25px 40px rgba(107, 0, 238, 0.9);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: #000;
+}
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid rgb(192, 0, 0);
+  font-size: 1.1rem;
+  background: #10fa33;
+}
+thead th {
+  background: #f2f204;
+  color: rgb(4, 182, 232);
+}
+
+/* ========== صفحة النتائج ========== */
+.results-title {
+  background: #ffffffcc;
+  border: 2px solid #4a90e2;
+  border-radius: 20px;
+  padding: 15px 25px;
+  width: fit-content;
+  margin: 20px auto;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  box-shadow: 0 6px 20px rgb(246, 221, 0);
+  transition: 0.3s;
+}
+.results-title:hover {
+  background: #e3f2fd;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(243, 2, 2, 0.874);
+}
+
+/* ========== صفحة المدرسين ========== */
+.teacher-content {
+  width: 60%;
+  margin: 80px auto 40px;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  background: #23a0e9;
+  box-shadow: 6px 15px 30px rgba(249, 2, 6, 0.95);
+  color: #fff;
+}
+.teacher-content .title {
+  font-family: 'Cairo', sans-serif;
+  font-size: 3rem;
+  color: #c1ef07;
+  font-weight: 900;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
+  text-shadow: 3px 4px 6px rgb(250, 5, 221);
+}
+.teacher-content .teachers-names {
+  font-family: 'Amiri', serif;
+  color: #070be3;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  border-left: 5px solid #0a0387;
+  padding-left: 15px;
+  text-shadow: 3px 4px 5px rgb(6, 213, 99);
+}
+.teacher-content .teachers-names p {
+  margin: 12px 0;
+}
+.teacher-content .thank-you {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.3rem;
+  color: #09e810;
+  font-weight: 600;
+  background: #2e03ad;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(211, 248, 5, 0.97);
+  line-height: 1.7;
+  text-shadow: 3px 4px 5px rgb(232, 17, 222);
+}
+
+/* ========== قائمة عادية ========== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  background: rgb(7, 221, 232);
+  margin: 10px auto;
+  padding: 10px;
+  width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(7, 194, 215, 0.8);
+  color: #000;
+}
